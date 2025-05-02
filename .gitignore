@@ -1,3 +1,6 @@
 .vscode/
 .txt
 .DS_Store
+pinn
+test_loss_functions
+test_neural_network
