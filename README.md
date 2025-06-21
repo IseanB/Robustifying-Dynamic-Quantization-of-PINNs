@@ -3,7 +3,7 @@
 ------------------------
 
 
-This is a simple implementation of the Physics-informed Neural Networks (PINNs) using ***PyTorch*** and ***Tensorflow***.
+This is a simple implementation of the Physics-informed Neural Networks (PINNs), using ***PyTorch***, that has been extended with a robustified dynamically quantization process.
 
 -------------------------------------------
 
