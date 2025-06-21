@@ -3,9 +3,18 @@
 ------------------------
 
 
-This is a simple implementation of the Physics-informed Neural Networks (PINNs) using ***PyTorch*** and ***Tensorflow***.
+This is a simple implementation of the Physics-informed Neural Networks (PINNs), using PyTorch, that has been extended with a robustified dynamically quantization process.
 
 -------------------------------------------
+
+## Results
+
+Below shows a link we discovered between small, Gaussian noise injection into PINNs and decreased performance degredation in the dynamic quantization process. By finding this simple robustificaiton process of the dynamic quantization process, we can benefit from the lack of a calibration set and typically post-quantization work done in non-dyanmic quantization processes required to decrease the performance degredation of quantization processes. 
+
+![image](https://github.com/user-attachments/assets/5c754812-fe50-4d86-a6de-603637ea6a14)
+
+![image](https://github.com/user-attachments/assets/47f719fd-0a79-419f-9b87-620a4ebc2518)
+
 
 ## Attribute
 
