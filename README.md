@@ -1,21 +1,34 @@
 # PINNs (Physics-informed Neural Networks)
 
+![image](https://github.com/user-attachments/assets/00f94358-6ffd-4a6d-b45d-d151d3013080)
+
 ------------------------
-
-
 
 This is a simple implementation of the Physics-informed Neural Networks (PINNs), using ***PyTorch***, that has been extended with a robustified dynamically quantization process.
 
--------------------------------------------
+------------------------
 
-## Results
+## Problem
 
-Below shows a link we discovered between small, Gaussian noise injection into PINNs and decreased performance degredation in the dynamic quantization process. By finding this simple robustificaiton process of the dynamic quantization process, we can benefit from the lack of a calibration set and typically post-quantization work done in non-dyanmic quantization processes required to decrease the performance degredation of quantization processes. 
+PINNs, like other Deep Neural Network (DNN) based models, are typically [quantized](https://huggingface.co/docs/optimum/en/concept_guides/quantization) to reduce its memory footprint and allow models to run on resource (compute, memory, bandwidth, power, etc.) constrained devices. 
+
+However <ins> due to the nature of the quantization process, model performance degrades </ins> (see figure below). This reduces a PINN model's accuracy and usability in real-world scenarios, which may further compound the model's performance degradation.
+
+## Our Solution
+
+Below shows how small, Gaussian noise injected into the training process of a PINN **decreased** performance degradation in the dynamic quantization process. Through this simple robustification technique of the dynamic quantization process, we can benefit from the lack of a calibration set and typically post-quantization work done in non-dynamic quantization processes required to decrease the performance degradation of quantization processes. 
+
+Put simply, <ins> we unlocked broader use of a powerful quantization technique by minimizing its performance drop in PINNs </ins>. Therefore, our work helps to enable Edge Computing and [Edge AI](https://www.hpe.com/us/en/what-is/edge-ai.html) applications for these data efficient, physics-grounded, and robust Neural Networks: PINNs. 
+
+As a bonus we also open sourced our code for you to try it out for your self. :)
 
 ![image](https://github.com/user-attachments/assets/5c754812-fe50-4d86-a6de-603637ea6a14)
 
 ![image](https://github.com/user-attachments/assets/47f719fd-0a79-419f-9b87-620a4ebc2518)
 
+**Note we narrowed our work on a PINN based on [Burgers' Equation](https://en.wikipedia.org/wiki/Burgers%27_equation)--which has applications in traffic flow, fluid mechanics, nonlinear acoustics, and gas dynamics.
+
+**We focus on the dynamic quantization process due to its straightforward integration and widespread adoption potential into DNN/PINN deployments. Dynamic quantization is utilized during runtime, to reduce the bandwidth needed to transfer all of the parameters to an inference device (typically a GPU), AND does not require post-training fine tuning or an accompanying dataset.
 
 ## Attribute
 
