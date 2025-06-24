@@ -18,7 +18,7 @@ However <ins> due to the nature of the quantization process, model performance d
 
 ## Our Solution
 
-Below shows how small, Gaussian noise injected into the training process of a PINN **decreased** performance degradation in the dynamic quantization process. Through this simple robustification technique of the dynamic quantization process, we can benefit from the lack of a calibration set and typically post-quantization work done in non-dynamic quantization processes required to decrease the performance degradation of quantization processes. 
+Below shows how small, Gaussian noise injected into the training process of a PINN **decreased** performance degradation in the dynamic quantization process. Through this simple robustification technique of the dynamic quantization process, we can benefit from the lack of a calibration set and avoid post-quantization work done in non-dynamic quantization processes required to decrease the performance degradation of quantization processes. 
 
 Put simply, <ins> we unlocked broader use of a powerful quantization technique by minimizing its performance drop in PINNs </ins>. Therefore, our work helps to enable Edge Computing and [Edge AI](https://www.hpe.com/us/en/what-is/edge-ai.html) applications for these data efficient, physics-grounded, and robust Neural Networks: PINNs. 
 
