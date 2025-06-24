@@ -30,7 +30,7 @@ As a bonus we also open sourced our code for you to try it out for your self. :)
 
 **Note we narrowed our work on a PINN based on [Burgers' Equation](https://en.wikipedia.org/wiki/Burgers%27_equation)--which has applications in traffic flow, fluid mechanics, nonlinear acoustics, and gas dynamics.
 
-**We focus on the dynamic quantization process due to its straightforward integration and widespread adoption potential into DNN/PINN deployments. Dynamic quantization is utilized during runtime, to reduce the bandwidth needed to transfer all of the parameters to an inference device (typically a GPU), AND does not require post-training fine tuning or an accompanying dataset.
+**We focus on the dynamic quantization process due to its straightforward integration and widespread adoption potential into DNN/PINN deployments. Dynamic quantization reduces model size and speeds up inference by converting weights to int8 ahead of time and quantizing activations dynamically during runtime. It does not require post-training fine-tuning or access to a dataset, and is primarily used for CPU inference rather than GPU.
 
 ## Attribute
 
